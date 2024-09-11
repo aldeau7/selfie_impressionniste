@@ -1,0 +1,188 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    margin: 0; /* Remove default body margin */
+    background-color: rgba(229,45,15, 0.06);
+}
+
+.container {
+    margin-top: -10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.texte {
+    height: 100vh; 
+}
+
+.button {
+    margin: 200px;
+}
+
+.blurry-button {
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 3vh;
+    height: 8vh;
+    width: 25vh;
+    padding: 1vh;
+    border: 0px solid grey;
+    border-radius: 3px;
+    text-decoration: none;
+    color: rgb(200,225,255);
+    font-size: 4vh;
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
+    backdrop-filter: blur(2px); /* Apply blur effect to the background */
+    cursor: pointer;
+}
+
+/* Hover effect 
+    Pastel Red: rgba(255, 204, 204, 1)
+    Pastel Green: rgba(204, 255, 204, 1)
+    Pastel Blue: rgba(204, 204, 255, 1)
+*/
+.blurry-button:hover {
+    background-color: rgb(255, 200, 200, 0.25); /* Semi-transparent background */
+    color:rgb(255,255,255);
+}
+
+/*
+#camera:hover {
+    background-color: rgb(255, 255, 255); 
+    backdrop-filter: blur(2px); 
+}
+
+#gallery:hover {
+    background-color: rgba(204, 255, 204, 0.5); 
+    backdrop-filter: blur(2px); 
+}
+
+#about:hover {
+    background-color: rgba(204, 204, 255, 0.5); 
+    backdrop-filter: blur(2px); 
+}
+*/
+
+.a {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+.rectangle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 192, 203, 0.7); /* Pastel pink */
+    border-radius: 2px;
+}
+
+video {
+    display: none; /* Hide the video element */
+}
+
+#bg {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+#videoFeed {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid black;
+    margin-bottom: 10px;
+}
+
+#captureButton {
+    position: absolute;
+    bottom: -2vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(141, 141, 141, 0.288); /* Semi-transparent background */
+    backdrop-filter: blur(2px); /* Apply blur effect to the background */
+    padding: 5vh;
+    font-size: 16px;
+    cursor: pointer;
+    border: 3px solid rgb(255,255,255);
+    border-radius: 50%; /* Make it circular */
+}
+
+#canvas {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.grid {
+    height: 100vh;
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50vh, 1fr)); /* Adjust the minimum and maximum width as needed */
+    gap: 10px; /* Adjust the gap between grid items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.grid-item {
+    width: 100%; /* Ensure each item takes up the full width of its grid cell */
+    height: auto; /* Automatically adjust height based on width */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.grid-item img {
+    max-width: 100%; /* Ensure the image does not exceed the width of the grid item */
+    max-height: 100%; /* Ensure the image does not exceed the height of the grid item */
+    width: auto; /* Allow the image to scale proportionally */
+    height: auto; /* Allow the image to scale proportionally */
+    display: block;
+}
+
+p
+{
+  font-size: 1em;
+  font-family: 'Poppins light', sans-serif;
+  text-align: justify;
+  padding: 1.5em;
+  color: rgba(57,11,4, 0.75);
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  margin: 5vh 10vh 0 10vh;
+  backdrop-filter: blur(2px);
+}
+
+h1
+{
+  font-size: 2em;
+  text-align: right;
+  padding-right: 10vh;
+  font-family: 'Poppins',sans-serif;
+  font-weight: 500;
+  color: rgba(229,45,15,0.5);
+}
+
+strong{
+  font-family: 'Poppins',sans-serif;
+  font-weight: 400; 
+  color: rgba(57,11,4, 0.75);
+}
+
